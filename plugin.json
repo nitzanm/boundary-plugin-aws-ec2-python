@@ -1,0 +1,42 @@
+{
+    "description": "Monitors AWS Elastic Compute Cloud",
+    "command": "python -u ec2_plugin.py",
+    "icon" : "icon.png",
+    "metrics" : [
+        "NM_AWS_EC2_CPU_CREDIT_USAGE",
+        "NM_AWS_EC2_CPU_CREDIT_BALANCE",
+        "NM_AWS_EC2_CPU_UTILIZATION",
+        "NM_AWS_EC2_DISK_READ_OPS",
+        "NM_AWS_EC2_DISK_WRITE_OPS",
+        "NM_AWS_EC2_DISK_READ_BYTES",
+        "NM_AWS_EC2_DISK_WRITE_BYTES",
+        "NM_AWS_EC2_NETWORK_IN",
+        "NM_AWS_EC2_NETWORK_OUT",
+        "NM_AWS_EC2_STATUS_CHECK_FAILED",
+        "NM_AWS_EC2_STATUS_CHECK_FAILED_INSTANCE",
+        "NM_AWS_EC2_STATUS_CHECK_FAILED_SYSTEM"],
+
+    "dashboards" : [{"name" : "AWS EC2",
+        "layout" : 
+"d-w=4&d-h=4&d-pad=5&d-bg=none&d-g-NM_AWS_EC2_NETWORK_IN=2-0-1-2-t&d-g-NM_AWS_EC2_NETWORK_OUT=2-0-1-2-b&d-g-NM_AWS_EC2_DISK_READ_BYTES=0-2-1-2-t&d-g-NM_AWS_EC2_DISK_WRITE_BYTES=0-2-1-2-b&d-g-NM_AWS_EC2_DISK_READ_OPS=1-2-1-2-t&d-g-NM_AWS_EC2_DISK_WRITE_OPS=1-2-1-2-b&d-g-NM_AWS_EC2_STATUS_CHECK_FAILED=3-0-1-1&d-g-NM_AWS_EC2_STATUS_CHECK_FAILED_INSTANCE=3-1-1-1&d-g-NM_AWS_EC2_STATUS_CHECK_FAILED_SYSTEM=3-2-1-1&d-g-NM_AWS_EC2_CPU_CREDIT_BALANCE=2-2-1-1&d-g-NM_AWS_EC2_CPU_CREDIT_USAGE=2-3-1-1&d-g-NM_AWS_EC2_CPU_UTILIZATION=0-0-2-2" }],
+
+    "paramSchema": [
+        {
+            "title": "AWS Access Key Id",
+            "name": "access_key_id",
+            "description": "Access Key for AWS",
+            "type": "string",
+            "default": "",
+            "required": true
+        },
+        {
+            "title": "AWS Secret Key",
+            "name": "secret_key",
+            "description": "Secret Key for AWS",
+            "type": "string",
+            "default": "",
+            "required": true
+        }
+    ]
+}
+
