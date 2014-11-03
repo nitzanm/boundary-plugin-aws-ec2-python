@@ -29,7 +29,7 @@ class Ec2CloudwatchMetrics(CloudwatchMetrics):
         return (
             ('CPUCreditUsage', 'Average', 'AWS_EC2_CPU_CREDIT_USAGE'),
             ('CPUCreditBalance', 'Average', 'AWS_EC2_CPU_CREDIT_BALANCE'),
-            ('CPUUtilization', 'Average', 'AWS_EC2_CPU_UTILIZATION'),
+            ('CPUUtilization', 'Average', 'AWS_EC2_CPU_UTILIZATION', 0.01),
             ('DiskReadOps', 'Sum', 'AWS_EC2_DISK_READ_OPS'),
             ('DiskWriteOps', 'Sum', 'AWS_EC2_DISK_WRITE_OPS'),
             ('DiskReadBytes', 'Sum', 'AWS_EC2_DISK_READ_BYTES'),
